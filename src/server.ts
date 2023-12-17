@@ -16,6 +16,7 @@ import Paths from '@src/constants/Paths';
 
 import EnvVars from '@src/constants/EnvVars';
 import HttpStatusCodes from '@src/constants/HttpStatusCodes';
+import cors from 'cors';
 
 import { NodeEnvs } from '@src/constants/misc';
 import { RouteError } from '@src/other/classes';
@@ -29,6 +30,7 @@ const app = express();
 // **** Setup **** //
 
 // Basic middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser(EnvVars.CookieProps.Secret));
