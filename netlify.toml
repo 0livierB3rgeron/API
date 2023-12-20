@@ -3,6 +3,7 @@
     functions = "functions"
 [functions]
     external_node_modules = ["express"]
+    included_files=["./functions/index.html"]
     node_bundler = "esbuild"
 [[redirects]]
     force = true
