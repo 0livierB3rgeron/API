@@ -2,6 +2,10 @@ import mongoose, { Schema, model } from 'mongoose';
 
 // **** Types **** //
 
+/**
+ * Création du model et du schema pour une ville
+ */
+
 const ContinentTypes = ['Amérique du nord', 'Amérique du sud', 'Europe', 'Asie', 'Afrique', 'Océanie'];
 
 export interface IVilles {

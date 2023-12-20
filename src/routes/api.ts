@@ -9,6 +9,11 @@ import HttpStatusCodes from '@src/constants/HttpStatusCodes';
 
 // **** Variables **** //
 
+/**
+ * Valide le corp d'une requète lors des insertions et 
+ * des modifications dans la bd
+ */
+
 const apiRouter = Router(),
   validate = jetValidator();
 

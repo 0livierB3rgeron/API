@@ -14,6 +14,10 @@ async function getAll(_: IReq, res: IRes) {
   return res.status(HttpStatusCodes.OK).json({ Villes });
 }
 
+/**
+ * Lire seulement une ville selon son nom
+ */
+
 async function getOne(req: IReq, res: IRes){
     const nom = req.params.nom;
     const ville = await VillesService.getOne(nom);
@@ -21,7 +25,7 @@ async function getOne(req: IReq, res: IRes){
 }
 
 /**
- * Ajoute un ville.
+ * Ajoute une ville.
  */
 async function add(req: IReq<{ ville: IVilles }>, res: IRes) {
   let { ville } = req.body;
@@ -30,7 +34,7 @@ async function add(req: IReq<{ ville: IVilles }>, res: IRes) {
 }
 
 /**
- * Mise à jour d'un ville.
+ * Mise à jour d'une ville.
  */
 async function update(req: IReq<{ ville: IVilles }>, res: IRes) {
   const { ville } = req.body;
@@ -39,7 +43,7 @@ async function update(req: IReq<{ ville: IVilles }>, res: IRes) {
 }
 
 /**
- * Supprimer un ville.
+ * Supprimer une ville.
  */
 async function delete_(req: IReq, res: IRes) {
   const id = req.params.id;
